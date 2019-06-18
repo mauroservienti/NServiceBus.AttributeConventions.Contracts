@@ -6,7 +6,7 @@ namespace NServiceBus.AttributeConventions.Contracts
     {
         public CommandAttribute() { }
     }
-    [System.AttributeUsageAttribute(System.AttributeTargets.Class | System.AttributeTargets.All, AllowMultiple=false, Inherited=false)]
+    [System.AttributeUsageAttribute(System.AttributeTargets.Class | System.AttributeTargets.Interface | System.AttributeTargets.All, AllowMultiple=false, Inherited=false)]
     public sealed class EventAttribute : System.Attribute
     {
         public EventAttribute() { }
