@@ -13,7 +13,7 @@ namespace NServiceBus.AttributeConventions.Contracts.Tests.API
         [MethodImpl(MethodImplOptions.NoInlining)]
         public void Approve_API()
         {
-            var publicApi = ApiGenerator.GeneratePublicApi(typeof(MessageAttribute).Assembly);
+            var publicApi = ApiGenerator.GeneratePublicApi(typeof(MessageAttribute).Assembly, options: null);
 
             Approvals.Verify(publicApi);
         }
