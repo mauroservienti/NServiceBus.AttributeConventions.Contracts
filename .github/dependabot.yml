@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/src/NServiceBus.AttributeConventions.Contracts.Tests"
+  schedule:
+    interval: daily
+    time: '04:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/src/NServiceBus.AttributeConventions.Contracts"
+  schedule:
+    interval: daily
+    time: '04:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/targets"
+  schedule:
+    interval: daily
+    time: '04:00'
+  open-pull-requests-limit: 10
