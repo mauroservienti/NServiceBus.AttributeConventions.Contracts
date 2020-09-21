@@ -1,5 +1,5 @@
 rules:
-- requiredAuthor: app/dependabot
+- requiredAuthor: dependabot-preview
   minApprovals:
     NONE: 0
 - minApprovals:
