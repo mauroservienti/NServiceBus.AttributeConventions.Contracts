@@ -10,9 +10,13 @@ internal class Program
 
         Target("default", DependsOn("test"));
 
-        Target("build",
+        Target("restore",
             Directory.EnumerateFiles("src", "*.sln", SearchOption.AllDirectories),
-            solution => Run(sdk.GetDotnetCliPath(), $"build \"{solution}\" --configuration Release"));
+            solution => Run(sdk.GetDotnetCliPath(), $"restore \"{solution}\""));
+        
+        Target("build", DependsOn("restore"),
+            Directory.EnumerateFiles("src", "*.sln", SearchOption.AllDirectories),
+            solution => Run(sdk.GetDotnetCliPath(), $"build \"{solution}\" --no-restore --configuration Release"));
 
         Target("test", DependsOn("build"),
             Directory.EnumerateFiles("src", "*Tests.csproj", SearchOption.AllDirectories),
