@@ -12,7 +12,7 @@ internal class Program
 
         Target("restore",
             Directory.EnumerateFiles("src", "*.sln", SearchOption.AllDirectories),
-            solution => Run(sdk.GetDotnetCliPath(), $"restore"));
+            solution => Run(sdk.GetDotnetCliPath(), $"restore \"{solution}\""));
         
         Target("build", DependsOn("restore"),
             Directory.EnumerateFiles("src", "*.sln", SearchOption.AllDirectories),
