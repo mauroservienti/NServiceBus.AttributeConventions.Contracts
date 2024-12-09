@@ -15,7 +15,7 @@ namespace NServiceBus.AttributeConventions.Contracts.Tests.API
         {
             var publicApi = typeof(MessageAttribute).Assembly.GeneratePublicApi();
 
-            Approvals.Verify(publicApi);
+            Approvals.Verify(publicApi.Replace(".git", ""));
         }
     }
 }
