@@ -15,6 +15,7 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <NoWarn>$(NoWarn);NU5105</NoWarn>
+    <PackageOutputPath>..\..\nugets</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
